@@ -7,7 +7,17 @@ set tabstop=4
 set shiftwidth=4
 set ls=2
 
-set number
+let mapleader="-"
+
+set relativenumber
+function! vimrc:togglenumber()
+	if(&relativenumber)
+		set number
+	else
+		set relativenumber
+	endif
+endfunc
+nnoremap <silent> <leader>n :call vimrc:togglenumber()<cr>
 
 filetype plugin indent on
 syntax on
