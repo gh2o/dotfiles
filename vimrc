@@ -3,6 +3,10 @@ set autoindent
 set hlsearch
 set mouse=a
 
+set nowrap
+set synmaxcol=400
+
+set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set ls=2
