@@ -36,6 +36,9 @@ set wildmenu
 
 set history=10000
 
+set splitbelow
+set splitright
+
 set cursorline
 highlight cursorline cterm=bold
 
