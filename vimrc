@@ -34,6 +34,8 @@ nmap <silent> <A-Right> :wincmd l<CR>
 set wildmode=longest:full
 set wildmenu
 
+set history=10000
+
 set cursorline
 highlight cursorline cterm=bold
 
