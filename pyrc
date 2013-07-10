@@ -1,0 +1,12 @@
+def go ():
+	import os, readline, atexit, rlcompleter
+	histfile = os.path.expanduser ("~/.pyhistory")
+	try:
+		readline.read_history_file (histfile)
+	except IOError:
+		pass
+	atexit.register (readline.write_history_file, histfile)
+	readline.parse_and_bind ("tab: complete")
+
+go ()
+del go
