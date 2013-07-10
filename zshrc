@@ -15,6 +15,7 @@ setopt noautomenu
 setopt extendedglob
 setopt correct
 unsetopt correctall
+unsetopt nomatch
 
 #### ENVIRONMENT SETUP
 
