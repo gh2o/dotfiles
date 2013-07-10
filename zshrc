@@ -5,3 +5,8 @@ CASE_SENSITIVE="true"
 plugins=(git gitfast)
 
 source $ZSH/oh-my-zsh.sh
+
+setopt noautomenu
+setopt extendedglob
+setopt correct
+unsetopt correctall
