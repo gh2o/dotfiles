@@ -17,6 +17,9 @@ setopt correct
 unsetopt correctall
 unsetopt nomatch
 
+bindkey "^[[5~" history-search-backward
+bindkey "^[[6~" history-search-forward
+
 #### ENVIRONMENT SETUP
 
 [[ -e "${HOME}/bin" ]] && export PATH="${HOME}/bin:${PATH}"
