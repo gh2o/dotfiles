@@ -1,3 +1,5 @@
+# vim: ft=python
+
 def go ():
 	import os, readline, atexit, rlcompleter
 	histfile = os.path.expanduser ("~/.pyhistory")
