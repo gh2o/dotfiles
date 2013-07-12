@@ -25,5 +25,5 @@ bindkey "^[[6~" history-search-forward
 [[ -e "${HOME}/bin" ]] && export PATH="${HOME}/bin:${PATH}"
 [[ -e "${HOME}/homebrew/bin" ]] && export PATH="${HOME}/homebrew/bin:${PATH}"
 export EDITOR=vim
-export LESS="-M -R"
+export LESS="-M -R -i"
 export PYTHONSTARTUP=${HOME}/.pyrc

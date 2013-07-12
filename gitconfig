@@ -1,0 +1,8 @@
+[include]
+	path = .gitconfig.user
+[push]
+	default = upstream
+[alias]
+	st = status
+	df = diff
+	dfc = diff --cached
