@@ -17,8 +17,8 @@ setopt correct
 unsetopt correctall
 unsetopt nomatch
 
-bindkey "^[[5~" history-search-backward
-bindkey "^[[6~" history-search-forward
+bindkey "^[[5~" history-beginning-search-backward
+bindkey "^[[6~" history-beginning-search-forward
 
 #### ENVIRONMENT SETUP
 
