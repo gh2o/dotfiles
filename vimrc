@@ -22,6 +22,7 @@ function! vimrc:togglenumber()
 	endif
 endfunc
 nnoremap <silent> <leader>n :call vimrc:togglenumber()<cr>
+nnoremap <silent> <leader>h :nohlsearch<cr>
 
 filetype plugin indent on
 syntax on
