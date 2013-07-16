@@ -7,6 +7,7 @@ CASE_SENSITIVE="true"
 plugins=(git gitfast)
 
 source $ZSH/oh-my-zsh.sh
+RPROMPT='%(?..%B%F{red}[%?]%f%b)'
 
 HISTSIZE=10000
 SAVEHIST=10000
