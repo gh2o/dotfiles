@@ -14,6 +14,7 @@ SAVEHIST=10000
 setopt noautomenu
 setopt extendedglob
 setopt correct
+unsetopt sharehistory
 unsetopt correctall
 unsetopt nomatch
 
