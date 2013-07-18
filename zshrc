@@ -22,6 +22,8 @@ unsetopt nomatch
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
 
+compdef -d nm strip # their completion ignores most files
+
 #### ENVIRONMENT SETUP
 
 [[ -e "${HOME}/bin" ]] && export PATH="${HOME}/bin:${PATH}"
