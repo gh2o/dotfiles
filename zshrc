@@ -23,6 +23,7 @@ bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
 
 compdef -d nm strip # their completion ignores most files
+zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 
 #### ENVIRONMENT SETUP
 
