@@ -13,15 +13,9 @@ set ls=2
 
 let mapleader="-"
 
+set number
 set relativenumber
-function! vimrc:togglenumber()
-	if(&relativenumber)
-		set number
-	else
-		set relativenumber
-	endif
-endfunc
-nnoremap <silent> <leader>n :call vimrc:togglenumber()<cr>
+nnoremap <silent> <leader>n :set relativenumber!<cr>
 nnoremap <silent> <leader>h :nohlsearch<cr>
 
 filetype plugin indent on
