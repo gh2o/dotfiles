@@ -2,7 +2,13 @@
 
 def go ():
 
-	import os, readline, atexit, rlcompleter
+	import os, atexit
+
+	try:
+		import readline, rlcompleter
+	except ImportError:
+		return
+
 	histfile = os.path.expanduser ("~/.pyhistory")
 
 	try:
