@@ -32,3 +32,7 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 export EDITOR=vim
 export LESS="-M -R -i"
 export PYTHONSTARTUP=${HOME}/.pyrc
+
+#### CUSTOM
+
+[[ -e "${HOME}/.zshrc.user" ]] && source "${HOME}/.zshrc.user"
