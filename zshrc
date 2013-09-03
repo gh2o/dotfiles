@@ -4,7 +4,11 @@ ZSH=$HOME/dotfiles/oh-my-zsh
 ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
-plugins=(git gitfast)
+
+plugins=()
+if [[ "$(uname -m)" != "mips" ]]; then
+	plugins+=(git gitfast)
+fi
 
 source $ZSH/oh-my-zsh.sh
 RPROMPT='%(?..%B%F{red}[%?]%f%b)'
