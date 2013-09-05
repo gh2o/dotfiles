@@ -5,13 +5,19 @@ ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
 
-plugins=()
-if [[ "$(uname -m)" != "mips" ]]; then
-	plugins+=(git gitfast)
+plugins=(git gitfast)
+
+if [[  "$(uname -m)" == "mips" ]]; then
+	plugins=()
+fi
+
+if [[ "$(uname -s)" == "SunOS" ]]; then
+	plugins=()
+	DISABLE_LS_COLORS=true
 fi
 
 source $ZSH/oh-my-zsh.sh
-RPROMPT='%(?..%B%F{red}[%?]%f%b)'
+RPROMPT='%(?..%{$fg_bold[red]%}[%?]%{$reset_color%})'
 
 HISTSIZE=10000
 SAVEHIST=10000
