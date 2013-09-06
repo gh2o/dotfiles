@@ -19,6 +19,10 @@ fi
 source $ZSH/oh-my-zsh.sh
 RPROMPT='%(?..%{$fg_bold[red]%}[%?]%{$reset_color%})'
 
+if [[ "$(uname -s)" == "SunOS" ]]; then
+	PROMPT="$(echo $PROMPT | sed 's/git_prompt_info/true/')"
+fi
+
 HISTSIZE=10000
 SAVEHIST=10000
 
