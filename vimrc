@@ -14,8 +14,11 @@ set ls=2
 let mapleader="-"
 
 set number
-set relativenumber
-nnoremap <silent> <leader>n :set relativenumber!<cr>
+if exists("&relativenumber")
+	set relativenumber
+	nnoremap <silent> <leader>n :set relativenumber!<cr>
+endif
+
 nnoremap <silent> <leader>h :nohlsearch<cr>
 
 filetype plugin indent on
