@@ -1,6 +1,7 @@
 set showcmd
 set autoindent
 set hlsearch
+set incsearch
 set mouse=a
 
 set nowrap
