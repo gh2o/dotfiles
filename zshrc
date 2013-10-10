@@ -1,6 +1,13 @@
 #### ZSH SETUP
 
-ZSH=$HOME/dotfiles/oh-my-zsh
+if [[ -e $HOME/dotfiles ]]; then
+	ZSH=$HOME/dotfiles/oh-my-zsh
+elif [[ -e /etc/dotfiles ]]; then
+	ZSH=/etc/dotfiles/oh-my-zsh
+else
+	echo "warning: dotfiles not found!" >&2
+fi
+
 ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
