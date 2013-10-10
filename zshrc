@@ -1,13 +1,14 @@
 #### ZSH SETUP
 
 if [[ -e $HOME/dotfiles ]]; then
-	ZSH=$HOME/dotfiles/oh-my-zsh
+	DOTFILES=$HOME/dotfiles
 elif [[ -e /etc/dotfiles ]]; then
-	ZSH=/etc/dotfiles/oh-my-zsh
+	DOTFILES=/etc/dotfiles
 else
 	echo "warning: dotfiles not found!" >&2
 fi
 
+ZSH="${DOTFILES}/oh-my-zsh"
 ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
@@ -52,7 +53,7 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 [[ -e "${HOME}/homebrew/bin" ]] && export PATH="${HOME}/homebrew/bin:${PATH}"
 export EDITOR=vim
 export LESS="-M -R -i"
-export PYTHONSTARTUP=${HOME}/.pyrc
+export PYTHONSTARTUP=${DOTFILES}/pyrc
 
 #### CUSTOM
 
