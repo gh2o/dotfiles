@@ -12,6 +12,7 @@ ZSH="${DOTFILES}/oh-my-zsh"
 ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
+DISABLE_AUTO_UPDATE="true"
 
 plugins=(git gitfast)
 
