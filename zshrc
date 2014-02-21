@@ -27,6 +27,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 RPROMPT='%(?..%{$fg_bold[red]%}[%?]%{$reset_color%})'
+RPROMPT="$RPROMPT"'%(1j.%{$fg_bold[magenta]%}{%j}%{$reset_color%}.)'
 
 if [[ "$(uname -s)" == "SunOS" ]]; then
 	PROMPT="$(echo $PROMPT | sed 's/git_prompt_info/true/')"
@@ -55,6 +56,12 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 export EDITOR=vim
 export LESS="-M -R -i"
 export PYTHONSTARTUP=${DOTFILES}/pyrc
+
+#### ALIASES
+
+if [[ "$(uname -s)" == "Linux" ]]; then
+	alias open=xdg-open
+fi
 
 #### CUSTOM
 
