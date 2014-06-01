@@ -13,6 +13,7 @@ ZSH_THEME=gentoo
 
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
+HIST_IGNORE_SPACE="true"
 
 plugins=(git gitfast)
 
@@ -66,3 +67,7 @@ fi
 #### CUSTOM
 
 [[ -e "${HOME}/.zshrc.user" ]] && source "${HOME}/.zshrc.user"
+
+#### EXIT PEACEFULLY
+
+true
