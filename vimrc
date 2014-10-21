@@ -46,3 +46,10 @@ let g:pyindent_nested_paren = '&sw'
 let g:pyindent_continue = '&sw'
 
 set backupdir=~/tmp/vim/,.
+
+if has("gui_running")
+	colorscheme darkblue
+	if filereadable("/usr/share/fonts/misc/ter-112n.pcf.gz")
+		set guifont=Terminus\ 8
+	endif
+endif
