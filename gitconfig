@@ -6,3 +6,5 @@
 	st = status
 	df = diff
 	dfc = diff --cached
+[review.review.cyanogenmod.org]
+	username = gavli
