@@ -57,6 +57,7 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 export EDITOR=vim
 export LESS="-M -R -i"
 export PYTHONSTARTUP=${DOTFILES}/pyrc
+unset GREP_OPTIONS
 
 #### ALIASES
 
