@@ -57,7 +57,12 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 export EDITOR=vim
 export LESS="-M -R -i"
 export PYTHONSTARTUP=${DOTFILES}/pyrc
-unset GREP_OPTIONS
+if [ -n "$GREP_OPTIONS" ]; then
+	alias grep="grep $GREP_OPTIONS"
+	unset GREP_OPTIONS
+else
+	echo "GREP_OPTIONS is no longer set by oh-my-zsh, remove me from zshrc" >&2
+fi
 
 #### ALIASES
 
