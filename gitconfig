@@ -8,3 +8,5 @@
 	dfc = diff --cached
 [review.review.cyanogenmod.org]
 	username = gavli
+[color]
+	ui = auto
