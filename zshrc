@@ -34,8 +34,8 @@ if [[ "$(uname -s)" == "SunOS" ]]; then
 	PROMPT="$(echo $PROMPT | sed 's/git_prompt_info/true/')"
 fi
 
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 setopt noautomenu
 setopt extendedglob
