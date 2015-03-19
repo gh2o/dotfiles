@@ -16,7 +16,7 @@ let mapleader="-"
 
 set number
 if exists("&relativenumber")
-	set relativenumber
+	"set relativenumber
 	nnoremap <silent> <leader>n :set relativenumber!<cr>
 endif
 
