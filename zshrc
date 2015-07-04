@@ -70,6 +70,10 @@ if [[ "$(uname -s)" == "Linux" ]]; then
 	alias open=xdg-open
 fi
 
+append_to_path() {
+	PATH="$PATH:$1"
+}
+
 #### CUSTOM
 
 [[ -e "${HOME}/.zshrc.user" ]] && source "${HOME}/.zshrc.user"
