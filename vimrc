@@ -30,6 +30,17 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
+nmap <silent> <A-1> :tabnext 1<CR>
+nmap <silent> <A-2> :tabnext 2<CR>
+nmap <silent> <A-3> :tabnext 3<CR>
+nmap <silent> <A-4> :tabnext 4<CR>
+nmap <silent> <A-5> :tabnext 5<CR>
+nmap <silent> <A-6> :tabnext 6<CR>
+nmap <silent> <A-7> :tabnext 7<CR>
+nmap <silent> <A-8> :tabnext 8<CR>
+nmap <silent> <A-9> :tabnext 9<CR>
+nmap <silent> <A-0> :tabnext 10<CR>
+
 set wildmode=longest:full
 set wildmenu
 
