@@ -66,3 +66,5 @@ if has("gui_running")
 	imap <C-S-v> <C-o>"+p
 	vmap <C-S-c> "+y
 endif
+
+autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
