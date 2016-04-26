@@ -63,7 +63,7 @@ if has("gui_running")
 	if filereadable("/usr/share/fonts/misc/ter-112n.pcf.gz")
 		set guifont=Terminus\ 8
 	endif
-	imap <C-S-v> <C-o>"+p
+	imap <C-S-v> <C-r>+
 	vmap <C-S-c> "+y
 endif
 
