@@ -2,7 +2,10 @@
 
 def go ():
 
-	import os, atexit
+	import os, sys, atexit
+
+	if sys.version_info[0] == 3:
+		return
 
 	try:
 		import readline, rlcompleter
