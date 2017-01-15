@@ -1,3 +1,4 @@
+set expandtab
 set showcmd
 set autoindent
 set hlsearch
@@ -68,3 +69,4 @@ if has("gui_running")
 endif
 
 autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
+autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
