@@ -62,7 +62,11 @@ set directory=~/tmp/vim//,.
 if has("gui_running")
 	colorscheme darkblue
 	if filereadable("/usr/share/fonts/misc/ter-112n.pcf.gz")
-		set guifont=Terminus\ 8
+        if filereadable("/usr/lib/libXfont2.so")
+            set guifont=xos4\ Terminus\ 8
+        else
+            set guifont=Terminus\ 8
+        endif
 	endif
 	imap <C-S-v> <C-r>+
 	vmap <C-S-c> "+y
