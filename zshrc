@@ -61,7 +61,7 @@ export PYTHONSTARTUP=${DOTFILES}/pyrc
 #### ALIASES
 
 if [[ "$(uname -s)" == "Linux" ]]; then
-	alias open=xdg-open
+	alias open='xdg-open </dev/null >/dev/null 2>&1'
 fi
 
 append_to_path() {
