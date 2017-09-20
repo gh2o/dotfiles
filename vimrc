@@ -5,6 +5,10 @@ set hlsearch
 set incsearch
 set mouse=a
 
+if has("mouse_sgr")
+    set ttymouse=sgr
+endif
+
 set nowrap
 set synmaxcol=400
 
