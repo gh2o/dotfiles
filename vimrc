@@ -10,6 +10,7 @@ if has("mouse_sgr")
 endif
 
 set nowrap
+set ruler
 set synmaxcol=400
 
 set backspace=indent,eol,start
