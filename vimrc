@@ -101,3 +101,8 @@ call s:add_dir_to_rtp("nerdtree")
 
 nnoremap <silent> <leader>l :NERDTreeToggle<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close if only nerdtree remains
+
+let s:vimrc_user = expand("~/.vimrc.user")
+if filereadable(s:vimrc_user)
+    exec "source " . fnameescape(s:vimrc_user)
+endif
