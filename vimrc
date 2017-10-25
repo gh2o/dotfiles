@@ -90,4 +90,8 @@ nnoremap <silent> <leader>4 :set ts=4<cr>
 nnoremap <silent> <leader>8 :set ts=8<cr>
 
 let s:dotfiles_dir=fnamemodify(resolve(expand("<sfile>")), ":p:h")
-let &runtimepath .= "," . s:dotfiles_dir . "/vim-airline"
+function! s:add_dir_to_rtp(dir)
+    let &runtimepath .= "," . s:dotfiles_dir . "/" . a:dir
+endfunction
+call s:add_dir_to_rtp("vim-airline")
+call s:add_dir_to_rtp("vim-python-pep8-indent")
