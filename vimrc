@@ -55,9 +55,6 @@ set history=10000
 set splitbelow
 set splitright
 
-set cursorline
-highlight cursorline cterm=bold
-
 let g:pyindent_open_paren = '&sw'
 let g:pyindent_nested_paren = '&sw'
 let g:pyindent_continue = '&sw'
@@ -78,6 +75,10 @@ if has("gui_running")
 	imap <C-S-v> <C-r>+
 	vmap <C-S-c> "+y
 endif
+
+set cursorline
+highlight cursorline cterm=bold
+highlight linenr     guibg=#103020
 
 autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
 autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
