@@ -81,3 +81,9 @@ endif
 
 autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
 autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
+autocmd BufNewFile,BufRead *.click setf click
+
+let g:netrw_silent=1
+nnoremap <silent> <leader>2 :set ts=2<cr>
+nnoremap <silent> <leader>4 :set ts=4<cr>
+nnoremap <silent> <leader>8 :set ts=8<cr>
