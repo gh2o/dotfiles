@@ -89,9 +89,15 @@ nnoremap <silent> <leader>2 :set ts=2<cr>
 nnoremap <silent> <leader>4 :set ts=4<cr>
 nnoremap <silent> <leader>8 :set ts=8<cr>
 
+" plugins! "
+
 let s:dotfiles_dir=fnamemodify(resolve(expand("<sfile>")), ":p:h")
 function! s:add_dir_to_rtp(dir)
     let &runtimepath .= "," . s:dotfiles_dir . "/" . a:dir
 endfunction
 call s:add_dir_to_rtp("vim-airline")
 call s:add_dir_to_rtp("vim-python-pep8-indent")
+call s:add_dir_to_rtp("nerdtree")
+
+nnoremap <silent> <leader>l :NERDTreeToggle<cr>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close if only nerdtree remains
