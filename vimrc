@@ -88,3 +88,6 @@ let g:netrw_silent=1
 nnoremap <silent> <leader>2 :set ts=2<cr>
 nnoremap <silent> <leader>4 :set ts=4<cr>
 nnoremap <silent> <leader>8 :set ts=8<cr>
+
+let s:dotfiles_dir=fnamemodify(resolve(expand("<sfile>")), ":p:h")
+let &runtimepath .= "," . s:dotfiles_dir . "/vim-airline"

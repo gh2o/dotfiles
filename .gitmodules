@@ -4,3 +4,6 @@
 [submodule "vim-python-pep8-indent"]
 	path = vim-python-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent/
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/vim-airline/vim-airline
