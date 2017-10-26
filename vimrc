@@ -12,6 +12,7 @@ endif
 set nowrap
 set ruler
 set synmaxcol=400
+set scrolloff=8     " lines to display before/after current line
 
 set backspace=indent,eol,start
 set tabstop=4
@@ -122,7 +123,8 @@ function! AirlineThemePatch(palette)
 endfunction
 
 " ctrlp "
-let g:ctrlp_clear_cache_on_exit = 0     " preserve ctrlp cache
+let g:ctrlp_clear_cache_on_exit = 0         " preserve ctrlp cache
+let g:ctrlp_types = ['mru', 'buf', 'fil']   " prioritize mru
 
 let s:vimrc_user = expand("~/.vimrc.user")
 if filereadable(s:vimrc_user)
