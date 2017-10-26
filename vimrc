@@ -99,8 +99,25 @@ call s:add_dir_to_rtp("vim-airline")
 call s:add_dir_to_rtp("vim-python-pep8-indent")
 call s:add_dir_to_rtp("nerdtree")
 
+" NERDTree "
 nnoremap <silent> <leader>l :NERDTreeToggle<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close if only nerdtree remains
+
+" vim-airline "
+let g:airline_section_a = airline#section#create_right(['iminsert'])    " no need for displaying mode
+
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+function! AirlineThemePatch(palette)
+    if g:airline_theme == 'dark'
+        " improve inactive mode contrast
+        for colors in values(a:palette.inactive)
+            if colors[2] == 239
+                let colors[0] = "#a8a8a8"
+                let colors[2] = 248
+            endif
+        endfor
+    endif
+endfunction
 
 let s:vimrc_user = expand("~/.vimrc.user")
 if filereadable(s:vimrc_user)
