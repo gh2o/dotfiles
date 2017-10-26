@@ -121,6 +121,9 @@ function! AirlineThemePatch(palette)
     endif
 endfunction
 
+" ctrlp "
+let g:ctrlp_clear_cache_on_exit = 0     " preserve ctrlp cache
+
 let s:vimrc_user = expand("~/.vimrc.user")
 if filereadable(s:vimrc_user)
     exec "source " . fnameescape(s:vimrc_user)
