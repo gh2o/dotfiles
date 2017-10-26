@@ -10,3 +10,6 @@
 [submodule "nerdtree"]
 	path = nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "ctrlp.vim"]
+	path = ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git

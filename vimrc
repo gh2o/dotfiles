@@ -99,6 +99,7 @@ call s:add_dir_to_rtp("vim-misc")
 call s:add_dir_to_rtp("vim-airline")
 call s:add_dir_to_rtp("vim-python-pep8-indent")
 call s:add_dir_to_rtp("nerdtree")
+call s:add_dir_to_rtp("ctrlp.vim")
 
 " NERDTree "
 nnoremap <silent> <leader>l :NERDTreeToggle<cr>
