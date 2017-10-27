@@ -12,7 +12,7 @@ endif
 set nowrap
 set ruler
 set synmaxcol=400
-set scrolloff=8     " lines to display before/after current line
+set scrolloff=3     " lines to display before/after current line
 
 set backspace=indent,eol,start
 set tabstop=4
