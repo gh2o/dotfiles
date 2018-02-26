@@ -4,6 +4,8 @@ if [[ -e $HOME/dotfiles ]]; then
 	DOTFILES=$HOME/dotfiles
 elif [[ -e /etc/dotfiles ]]; then
 	DOTFILES=/etc/dotfiles
+elif [[ -e /opt/dotfiles ]]; then
+	DOTFILES=/opt/dotfiles
 else
 	echo "warning: dotfiles not found!" >&2
 fi
