@@ -90,6 +90,8 @@ nnoremap <silent> <leader>2 :set ts=2<cr>
 nnoremap <silent> <leader>4 :set ts=4<cr>
 nnoremap <silent> <leader>8 :set ts=8<cr>
 
+nnoremap Q <Nop>
+
 " plugins! "
 
 let s:dotfiles_dir=fnamemodify(resolve(expand("<sfile>")), ":p:h")
