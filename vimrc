@@ -110,6 +110,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " vim-airline "
 let g:airline_section_a = airline#section#create_right(['iminsert'])    " no need for displaying mode
+let g:airline_highlighting_cache = 1
 
 let g:airline_theme_patch_func = 'AirlineThemePatch'
 function! AirlineThemePatch(palette)
