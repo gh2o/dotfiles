@@ -68,9 +68,9 @@ if has("gui_running")
 	colorscheme darkblue
 	if filereadable("/usr/share/fonts/misc/ter-112n.pcf.gz") || filereadable("/usr/share/kbd/consolefonts/ter-112n.psf.gz")
 		if filereadable("/usr/lib/libXfont2.so")
-			set guifont=xos4\ Terminus\ 8
+			set guifont=xos4\ Terminus\ 10
 		else
-			set guifont=Terminus\ 8
+			set guifont=Terminus\ 10
 		endif
 	endif
 	imap <C-S-v> <C-r>+
