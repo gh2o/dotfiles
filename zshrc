@@ -70,6 +70,11 @@ append_to_path() {
 	PATH="$PATH:$1"
 }
 
+append_to_ldlp() {
+    LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$1"
+    export LD_LIBRARY_PATH
+}
+
 #### CUSTOM
 
 [[ -e "${HOME}/.zshrc.user" ]] && source "${HOME}/.zshrc.user"
