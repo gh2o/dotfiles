@@ -56,6 +56,7 @@ zstyle ':completion:*' matcher-list 'r:|=*' # basic non-substring completion
 
 [[ -e "${HOME}/bin" ]] && export PATH="${HOME}/bin:${PATH}"
 [[ -e "${HOME}/homebrew/bin" ]] && export PATH="${HOME}/homebrew/bin:${PATH}"
+[[ -e "${HOME}/.cargo/bin" ]] && export PATH="${HOME}/.cargo/bin:${PATH}"
 export EDITOR=vim
 export LESS="-M -R -i"
 export PYTHONSTARTUP=${DOTFILES}/pyrc
