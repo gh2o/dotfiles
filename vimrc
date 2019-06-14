@@ -48,6 +48,9 @@ nmap <silent> <A-8> :tabnext 8<CR>
 nmap <silent> <A-9> :tabnext 9<CR>
 nmap <silent> <A-0> :tabnext 10<CR>
 
+nmap <silent> <X1Mouse> <C-o>
+nmap <silent> <X2Mouse> <C-i>
+
 set wildmode=longest:full
 set wildmenu
 
