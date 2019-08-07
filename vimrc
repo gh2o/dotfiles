@@ -69,13 +69,7 @@ set directory=~/tmp/vim//,.
 
 if has("gui_running")
 	colorscheme darkblue
-	if filereadable("/usr/share/fonts/misc/ter-112n.pcf.gz") || filereadable("/usr/share/kbd/consolefonts/ter-112n.psf.gz")
-		if filereadable("/usr/lib/libXfont2.so")
-			set guifont=xos4\ Terminus\ 10
-		else
-			set guifont=Terminus\ 10
-		endif
-	endif
+	set guifont=DejaVu\ Sans\ Mono\ 10
 	imap <C-S-v> <C-r>+
 	vmap <C-S-c> "+y
 	nmap <C-S-c> "+yiw
@@ -92,7 +86,7 @@ autocmd BufNewFile,BufRead *.click setf click
 let g:netrw_silent=1
 nnoremap <silent> <leader>2 :set ts=2 sw=2<cr>
 nnoremap <silent> <leader>4 :set ts=4 sw=4<cr>
-nnoremap <silent> <leader>8 :set ts=8 ts=8<cr>
+nnoremap <silent> <leader>8 :set ts=8 sw=8<cr>
 
 nnoremap Q <Nop>
 
