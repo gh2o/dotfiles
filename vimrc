@@ -78,6 +78,7 @@ if has("gui_running")
 	endif
 	imap <C-S-v> <C-r>+
 	vmap <C-S-c> "+y
+	nmap <C-S-c> "+yiw
 endif
 
 set cursorline
@@ -89,9 +90,9 @@ autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
 autocmd BufNewFile,BufRead *.click setf click
 
 let g:netrw_silent=1
-nnoremap <silent> <leader>2 :set ts=2<cr>
-nnoremap <silent> <leader>4 :set ts=4<cr>
-nnoremap <silent> <leader>8 :set ts=8<cr>
+nnoremap <silent> <leader>2 :set ts=2 sw=2<cr>
+nnoremap <silent> <leader>4 :set ts=4 sw=4<cr>
+nnoremap <silent> <leader>8 :set ts=8 ts=8<cr>
 
 nnoremap Q <Nop>
 
