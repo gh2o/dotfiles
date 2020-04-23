@@ -92,7 +92,12 @@ nnoremap Q <Nop>
 
 " plugins! "
 
-let s:dotfiles_dir=fnamemodify(resolve(expand("<sfile>")), ":p:h")
+let s:dotfiles_dir = fnamemodify(resolve(expand("<sfile>")), ":p:h")
+if !filereadable(s:dotfiles_dir . "/vimrc") && isdirectory(s:dotfiles_dir . "/dotfiles")
+    " i.e. in docker where .vimrc and dotfiles are bind mounted
+    let s:dotfiles_dir .= "/dotfiles"
+endif
+
 function! s:add_dir_to_rtp(dir)
     let &runtimepath .= "," . s:dotfiles_dir . "/" . a:dir
 endfunction
