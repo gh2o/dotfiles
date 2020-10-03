@@ -81,6 +81,7 @@ alias k2="kill %2"
 alias k3="kill %3"
 alias pspc="ps -eHo pid,cmd"
 alias rgw="rg -w"
+alias nj="ninja"
 
 #### CUSTOM
 
