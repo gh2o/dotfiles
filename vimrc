@@ -13,6 +13,7 @@ set nowrap
 set ruler
 set synmaxcol=400
 set scrolloff=3     " lines to display before/after current line
+set guioptions-=L   " no left scrollbar
 
 set backspace=indent,eol,start
 set tabstop=4
