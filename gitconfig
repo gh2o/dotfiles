@@ -10,3 +10,5 @@
 	username = gavli
 [color]
 	ui = auto
+[merge]
+    conflictStyle = diff3
