@@ -145,7 +145,7 @@ if executable('rust-analyzer')
                 \   'name': 'Rust Language Server',
                 \   'cmd': {server_info->['rust-analyzer']},
                 \   'whitelist': ['rust'],
-                \   'initialization_options': {'cargo': {'allFeatures': v:true}, 'procMacro': {'enable': v:true}},
+                \   'initialization_options': {'cargo': {'allFeatures': v:true, 'runBuildScripts': v:false}, 'procMacro': {'enable': v:false}},
                 \ })
 endif
 
