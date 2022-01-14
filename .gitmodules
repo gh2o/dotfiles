@@ -13,3 +13,6 @@
 [submodule "ctrlp.vim"]
 	path = ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim-lsp"]
+	path = vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp

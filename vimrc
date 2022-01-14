@@ -80,9 +80,9 @@ set cursorline
 highlight cursorline cterm=bold
 highlight linenr     guibg=#103020
 
-autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
-autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
-autocmd BufNewFile,BufRead *.click setf click
+"autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
+"autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
+"autocmd BufNewFile,BufRead *.click setf click
 
 let g:netrw_silent=1
 nnoremap <silent> <leader>2 :set ts=2 sw=2<cr>
@@ -104,6 +104,7 @@ function! s:add_dir_to_rtp(dir)
 endfunction
 call s:add_dir_to_rtp("vim-misc")
 call s:add_dir_to_rtp("vim-airline")
+call s:add_dir_to_rtp("vim-lsp")
 call s:add_dir_to_rtp("vim-python-pep8-indent")
 call s:add_dir_to_rtp("nerdtree")
 call s:add_dir_to_rtp("ctrlp.vim")
@@ -137,3 +138,25 @@ let s:vimrc_user = expand("~/.vimrc.user")
 if filereadable(s:vimrc_user)
     exec "source " . fnameescape(s:vimrc_user)
 endif
+
+" vim-lsp/rust-analyzer "
+if executable('rust-analyzer')
+    autocmd User lsp_setup call lsp#register_server({
+                \   'name': 'Rust Language Server',
+                \   'cmd': {server_info->['rust-analyzer']},
+                \   'whitelist': ['rust'],
+                \   'initialization_options': {'cargo': {'allFeatures': v:true}, 'procMacro': {'enable': v:true}},
+                \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+endfunction
+
+augroup lsp_install
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
