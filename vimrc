@@ -156,6 +156,9 @@ function! s:on_lsp_buffer_enabled() abort
     " map <C-Space> (also called <C-@> on terminal) to omnifunc
     inoremap <C-Space> <C-x><C-o>
     inoremap <C-@> <C-x><C-o>
+    nmap <buffer> <leader>d <plug>(lsp-definition)
+    nmap <buffer> <leader>r <plug>(lsp-references)
+    nmap <buffer> K <plug>(lsp-hover)
 endfunction
 
 augroup lsp_install
