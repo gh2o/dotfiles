@@ -153,6 +153,9 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    " map <C-Space> (also called <C-@> on terminal) to omnifunc
+    inoremap <C-Space> <C-x><C-o>
+    inoremap <C-@> <C-x><C-o>
 endfunction
 
 augroup lsp_install
