@@ -158,6 +158,7 @@ function! s:on_lsp_buffer_enabled() abort
     inoremap <C-@> <C-x><C-o>
     nmap <buffer> <leader>d <plug>(lsp-definition)
     nmap <buffer> <leader>r <plug>(lsp-references)
+    nmap <buffer> <leader><Space> <plug>(lsp-code-action)
     nmap <buffer> K <plug>(lsp-hover)
 endfunction
 
