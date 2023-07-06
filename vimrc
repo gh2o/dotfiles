@@ -83,6 +83,7 @@ highlight linenr     guibg=#103020
 "autocmd BufNewFile,BufRead /home/gavin/cs164/*,/home/gavin/src/f15/cs164/*,/home/gavin/src/s16/eecs151/* setlocal expandtab
 "autocmd BufNewFile,BufRead /home/gavin/appstuff/him/* setlocal noexpandtab
 "autocmd BufNewFile,BufRead *.click setf click
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab
 
 let g:netrw_silent=1
 nnoremap <silent> <leader>2 :set ts=2 sw=2<cr>
