@@ -16,6 +16,3 @@
 [submodule "vim-lsp"]
 	path = vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp
-[submodule "copilot.vim"]
-	path = copilot.vim
-	url = https://github.com/github/copilot.vim
